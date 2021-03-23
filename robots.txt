@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://kopacze.space/sitemap.xml
+Host: https://kopacze.space
