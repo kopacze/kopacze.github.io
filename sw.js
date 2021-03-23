@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-67a0ad0b780b0466af96.js"
+    "url": "webpack-runtime-98844853f91e1c192594.js"
   },
   {
     "url": "framework-e2d419ac45d8ae41957a.js"
   },
   {
-    "url": "app-8b4740e66832ec195e14.js"
+    "url": "app-a36b8d64b40e6e8616d1.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f04fa7e36a07e0ecd251a31b32c44be0"
+    "revision": "cc0a775538201977308a000c5a486c6a"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-16703ee5599528db9f93.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "1f45afc368264dbfc1165aed2ae5dfa6"
+    "revision": "e5f29ef755af0a9c14e7b970578154f1"
   },
   {
     "url": "polyfill-a77fbbfe2ab7c205d557.js"
@@ -159,12 +159,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/kopacze-diggers`), ``)
+  pathname = pathname.replace(new RegExp(`^/kopacze.github.io`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/kopacze-diggers/app-8b4740e66832ec195e14.js`))) {
+  if (!resources || !(await caches.match(`/kopacze.github.io/app-a36b8d64b40e6e8616d1.js`))) {
     return await fetch(event.request)
   }
 
@@ -177,7 +177,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/kopacze-diggers/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/kopacze.github.io/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
