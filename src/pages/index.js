@@ -40,19 +40,6 @@ const IndexPage = () => {
             })}
         </StyledContainer>
       </StyledSection>
-      {/* CAMP SECTION */}
-      {/* <StyledSection>
-        <StyledBackgroundImage background={secondImage}></StyledBackgroundImage>
-        <StyledContainer>
-          <h2>{t("home.campHeader")}</h2>
-            {t("home.campBody")
-              .split("\n")
-              .map((item, key) => {
-                return <p key={key}>{item}</p>
-              })}
-          <a href={t("home.campHref")}>{t("home.campLink")}</a>
-        </StyledContainer>
-      </StyledSection> */}
     </>
   )
 }
